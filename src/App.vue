@@ -1,15 +1,30 @@
 <template>
   <div id="app">
-    <credit-card />
+    <form>
+      <credit-card v-model="order.creditCard"/>
+      <form-button> 👉 Invia dati </form-button>
+    </form>
   </div>
 </template>
 
 <script>
+
 import CreditCard from "@/components/CreditCard.vue";
+import FormButton from '@/components/FormButton.vue';
 export default {
   name: "App",
   components: {
     CreditCard,
+    FormButton,
+  },
+
+  data(){
+    return{
+      creditCardsInfo: null,
+      order: {
+        creditCard: {}
+      }
+    }
   },
 };
 </script>
@@ -36,7 +51,7 @@ body
   height: 100vh
   font-family: sans-serif
 
-  .credit-card
-    box-shadow: 0 1rem 4rem rgba(#cda66c, .5)
-    background-image: linear-gradient(331deg, #41c2c7, #cda66c)
+  form
+    button
+      margin-top: 1rem
 </style>

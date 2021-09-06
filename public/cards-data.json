@@ -1,47 +1,57 @@
 [
   {
     "name": "American Express",
-    "iins": [34, 37],
-    "codeLength": {
+    "codeRegexps": ["^34", "^37"],
+    "validations": {
       "min": 15,
       "max": 15
     },
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/fa/American_Express_logo_%282018%29.svg",
+    "colors": ["#1b2954", "#2671b9"],
+    "mask": "#### #### #### ###"
   },
   {
     "name": "Maestro",
-    "iins": [5018, 5020, 5038, 5893, 6304, 6759, 6761, 6762, 6763],
-    "codeLength": {
-      "min": 0,
-      "max": 0
+    "codeRegexps": ["^5018", "^5020", "^5038", "^5893", "^6304", "^6759", "^6761", "^6762", "^6763", "^6759", "^676770", "^676774"],
+    "validations": {
+      "min": 12,
+      "max": 19
     },
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/80/Maestro_2016.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/80/Maestro_2016.svg",
+    "colors": ["#1b2954", "#2671b9"],
+    "mask": "#### #### #### #### ###"
   },
   {
     "name": "Mastercard",
-    "iins": [22, 23, 24, 25, 26, 27, 51, 52, 53, 54, 55],
-    "codeLength": {
+    "codeRegexps": ["^2[2-7]", "^5[1-5]"],
+    "validations": {
       "min": 16,
       "max": 16
     },
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg",
+    "colors": ["#eb001b", "#f79e1b"],
+    "mask": "#### #### #### ####"
   },
   {
     "name": "Visa",
-    "iins": [4],
-    "codeLength": {
+    "codeRegexps": ["^4"],
+    "validations": {
       "min": 13,
       "max": 16
     },
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Visa_2021.svg/640px-Visa_2021.svg.png"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Visa_2021.svg/640px-Visa_2021.svg.png",
+    "colors": ["#1a1f71", "#f7b600"],
+    "mask": "#### #### #### ####"
   },
   {
     "name": "Visa Electron",
-    "iins": [4026, 417500, 4508, 4844, 4913, 4917],
-    "codeLength": {
+    "codeRegexps": ["^4026", "^417500", "^4508", "^4844", "^4913", "^4917"],
+    "validations": {
       "min": 16,
       "max": 16
     },
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/02/Visa_Electron.svg"
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/02/Visa_Electron.svg",
+    "colors": ["#1a1f71", "#f7b600"],
+    "mask": "#### #### #### ####"
   }
 ]
